@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>🔗 Allocate Resource to Event</h3>
+<p style="color: var(--text-secondary); margin-bottom: 20px;">Assign resources to your events and check for scheduling conflicts</p>
+
+<form method="post" style="max-width: 500px;">
+    <label for="event">Select Event</label>
+    <select id="event" name="event" required>
+        <option value="">-- Choose an event --</option>
+        {% for e in events %}
+            <option value="{{ e._id }}">{{ e.title }} ({{ e.start.strftime('%b %d, %Y %H:%M') }} → {{ e.end.strftime('%H:%M') }})</option>
+        {% endfor %}
+    </select>
+
+    <label for="resource">Select Resource</label>
+    <select id="resource" name="resource" required>
+        <option value="">-- Choose a resource --</option>
+        {% for r in resources %}
+            <option value="{{ r._id }}">{{ r.name }} ({{ r.type }})</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit" class="btn">✓ Allocate Resource</button>
+</form>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>🎯 Resources</h3>
+
+<form method="post" style="margin-bottom: 32px;">
+    <label for="name">Resource Name</label>
+    <input id="name" type="text" name="name" placeholder="e.g. Projector, Meeting Room A, Sound System" required>
+
+    <label for="type">Resource Type</label>
+    <input id="type" type="text" name="type" placeholder="e.g. Equipment, Space, Facility" required>
+
+    <button type="submit" class="btn">+ Add Resource</button>
+</form>
+
+<hr>
+
+<h4>📦 Available Resources</h4>
+{% if resources %}
+<ul>
+{% for r in resources %}
+    <li>
+        <div class="resource-item">
+          <strong>{{ r.name }}</strong>
+          <small style="color: var(--text-secondary); display: block; margin-top: 4px;">Type: <strong>{{ r.type }}</strong></small>
+        </div>
+    </li>
+{% endfor %}
+</ul>
+{% else %}
+<div class="notice">
+  <p>No resources added yet. <a href="#" onclick="document.querySelector('form').scrollIntoView()">Create your first resource</a></p>
+</div>
+{% endif %}
+
+{% endblock %}

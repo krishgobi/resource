@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div style="text-align: center; padding: 40px 20px;">
+  <h1 style="font-size: 2.5rem; margin-bottom: 16px; color: var(--primary);">📅 Welcome to EveRes</h1>
+  <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 32px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+    Plan great events and manage resources effortlessly. Schedule, allocate, and report — all in one simple app.
+  </p>
+  <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+    <a class="btn" href="/login" style="padding: 12px 24px; font-size: 1rem;">Login to Dashboard</a>
+    <a class="btn" href="/register" style="padding: 12px 24px; font-size: 1rem; background: var(--primary-600);">Create Account</a>
+  </div>
+</div>
+{% endblock %}

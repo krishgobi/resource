@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>📝 Create Account</h3>
+<p style="color: var(--text-secondary); margin-bottom: 20px;">Join us to start managing your events and resources</p>
+
+<form method="post">
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" placeholder="Choose a username" required>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" placeholder="Create a strong password" required>
+
+    <button type="submit" class="btn">Create Account</button>
+</form>
+
+<p style="margin-top: 20px; color: var(--text-secondary);">
+  Already have an account? <a href="/login">Login here</a>
+</p>
+
+{% endblock %}

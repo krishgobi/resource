@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>🔐 Login</h3>
+<p style="color: var(--text-secondary); margin-bottom: 20px;">Sign in to your account to manage events and resources</p>
+
+<form method="post">
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" placeholder="Enter your username" required>
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" placeholder="Enter your password" required>
+
+    <button type="submit" class="btn">Login</button>
+</form>
+
+<p style="margin-top: 20px; color: var(--text-secondary);">
+  Don't have an account? <a href="/register">Register here</a>
+</p>
+
+{% endblock %}

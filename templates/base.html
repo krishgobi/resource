@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EveRes - Event Resource Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="/{% if session.user %}events{% else %}{% endif %}">📅 Event@24</a>
+    </div>
+    {% if session.user %}
+    <nav class="main-nav">
+      <span>Welcome, <strong>{{ session.user }}</strong></span>
+      <a href="/events">Events</a>
+      <a href="/resources">Resources</a>
+      <a href="/allocate">Allocate</a>
+      <a href="/report">Report</a>
+      <a href="/logout">Logout</a>
+    </nav>
+    {% else %}
+    <nav class="main-nav">
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    </nav>
+    {% endif %}
+  </div>
+</header>
+
+<main class="main container">
+{% block hero %}{% endblock %}
+<div class="card">
+{% block content %}{% endblock %}
+</div>
+</main>
+
+<footer class="footer">
+  <div class="container">© 2025 EveRes. All rights reserved. Developed by <strong>Gobi</strong></div>
+</footer>
+
+</body>
+</html>

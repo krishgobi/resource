@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>📅 Events</h3>
+
+<form method="post" style="margin-bottom: 32px;">
+    <label for="title">Event Title</label>
+    <input id="title" name="title" type="text" placeholder="Give your event a clear title" required>
+
+    <div class="form-row">
+      <div>
+        <label for="start">Start Date & Time</label>
+        <input id="start" type="datetime-local" name="start" required>
+      </div>
+      <div>
+        <label for="end">End Date & Time</label>
+        <input id="end" type="datetime-local" name="end" required>
+      </div>
+    </div>
+
+    <label for="desc">Description</label>
+    <textarea id="desc" name="desc" rows="4" placeholder="Add a short description about the event..." required></textarea>
+
+    <button type="submit" class="btn">+ Add Event</button>
+</form> 
+
+<hr>
+
+<h4>📋 Your Events</h4>
+{% if events %}
+<ul>
+{% for e in events %}
+    <li>
+        <div class="event-item">
+          <strong>{{ e.title }}</strong>
+          <small>📍 {{ e.start.strftime('%b %d, %Y %H:%M') }} → {{ e.end.strftime('%b %d, %Y %H:%M') }}</small>
+          <p>{{ e.description }}</p>
+        </div>
+    </li>
+{% endfor %}
+</ul>
+{% else %}
+<div class="notice">
+  <p>No events created yet. <a href="#" onclick="document.querySelector('form').scrollIntoView()">Create your first event</a></p>
+</div>
+{% endif %}
+
+{% endblock %}

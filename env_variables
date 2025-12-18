@@ -1,0 +1,2 @@
+FLASK_SECRET_KEY = dvjhbjeasgrdnh3wesrdgtfchkyghmn
+MONGODB_URI = YOUR_MONGODB_URL

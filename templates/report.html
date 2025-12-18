@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h3>📊 Resource Utilization Report</h3>
+<p style="color: var(--text-secondary); margin-bottom: 20px;">Analyze resource usage and bookings over a time period</p>
+
+<form method="post" style="max-width: 600px; margin-bottom: 32px;">
+    <label for="start">Start Date & Time</label>
+    <input id="start" type="datetime-local" name="start" required>
+
+    <label for="end">End Date & Time</label>
+    <input id="end" type="datetime-local" name="end" required>
+
+    <button type="submit" class="btn">📈 Generate Report</button>
+</form>
+
+<hr>
+
+{% if report %}
+<div style="overflow-x: auto;">
+  <table class="table">
+      <tr>
+          <th>Resource</th>
+          <th>Total Hours Used</th>
+          <th>Upcoming Bookings</th>
+      </tr>
+
+      {% for r in report %}
+      <tr>
+          <td><strong>{{ r[0] }}</strong></td>
+          <td>{{ '%.2f' % r[1] }} hrs</td>
+          <td>{{ r[2] }} bookings</td>
+      </tr>
+      {% endfor %}
+  </table>
+</div>
+{% else %}
+<div class="notice">
+  <p>Select a date range above to generate a resource utilization report.</p>
+</div>
+{% endif %}
+
+{% endblock %}
