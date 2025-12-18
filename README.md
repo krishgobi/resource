@@ -83,3 +83,25 @@ Contributions welcome — create an issue or a PR with fixes or improvements.
 
 ## License
 MIT License
+
+
+Snippets
+
+<img width="1920" height="1200" alt="Screenshot (543)" src="https://github.com/user-attachments/assets/1694b497-6188-464f-91ed-596913669568" />
+
+<img width="1920" height="1200" alt="Screenshot (544)" src="https://github.com/user-attachments/assets/05f6e8c8-9a87-459e-beda-f53966bc3625" />
+
+<img width="1920" height="1200" alt="Screenshot (545)" src="https://github.com/user-attachments/assets/e6c0f705-10b1-49aa-8e89-a397a97962e6" />
+
+<img width="1920" height="1200" alt="Screenshot (546)" src="https://github.com/user-attachments/assets/ce504c40-21c6-4770-9803-9c9844d42d14" />
+
+<img width="1920" height="1200" alt="Screenshot (547)" src="https://github.com/user-attachments/assets/d1f62044-e34d-438c-b1c6-480713152b4c" />
+
+<img width="1920" height="1200" alt="Screenshot (548)" src="https://github.com/user-attachments/assets/a1484207-b67f-4ec5-ab9d-b1dc951f753c" />
+
+<img width="1920" height="1200" alt="Screenshot (549)" src="https://github.com/user-attachments/assets/7beb00be-f946-4139-b2b9-024daf814689" />
+
+
+
+
+
